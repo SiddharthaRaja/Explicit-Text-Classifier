@@ -15,6 +15,10 @@
   - **Actual explicit-class performance (cell 11 output): precision 0.87, recall 0.62, F1 0.73.** Overall accuracy 0.86, macro-F1 0.82.
 - **Also:** the README describes **hard-negative training** and a **3-tier confidence threshold** on `decision_function` (> 0.8 / 0.3–0.8 / < 0.3). **Neither exists in the notebook.** That README was rewritten in May 2026 by a commit authored "Antigravity" (an AI coding agent), about a year after the notebook was committed. The "high recall" design story rests on the mislabelled number.
 
+- **Course context (found in another repo):** the project report, `Report_.pdf`, was committed by mistake to the `E-Commerce-Marketplace` repo (commit `c6e7f32`). It's the **BITS F464 Machine Learning, Semester 2 2024-25, Phase-3 report**, a **team of four** (Siddhartharaja Tammana, Kaushik Voolapalli, Malisetty Vinisha, Sai Lokesh Kalva). It's based on the paper *"Machine Learning Techniques for the Detection of Inappropriate Erotic Content in Text"* (IJCIS 2020).
+  - The report states "accuracy (0.86) and F1-score (0.91)" and "precision reaching a value of 0.86". The 0.91 F1 and 0.86 precision are the **Not-Explicit** class's values (the same `target_names` swap). The explicit class's F1 is **0.73**.
+  - The report's own work-split table credits you with "generated the results of the paper, designed the model and the computational framework, carried out the experiments".
+
 ---
 
 ## 1. One-paragraph pitch (30 seconds)
@@ -200,7 +204,7 @@ There is no server, API or saved model. Everything lives in the notebook's kerne
 6. **Out-of-order notebook execution** and hidden state. There are no saved models, so it can't be deployed.
 7. **Preprocessing order** (regex before spaCy) degrades lemmatisation and kills negations and contractions.
 8. **Tiny test set** (64 positives), so every metric has wide uncertainty.
-9. **Provenance:** the notebook ran on a machine with user `Akhil` (cell 0 output), and the README was rewritten by an AI agent. Be clear about your own contribution.
+9. **Provenance:** the notebook ran on a machine with user `Akhil` (cell 0 output), the README was rewritten by an AI agent, and the course report shows it was a **4-person team project** (BITS F464). Be clear about your own contribution: the report credits you with generating results, designing the model and running experiments.
 
 ---
 

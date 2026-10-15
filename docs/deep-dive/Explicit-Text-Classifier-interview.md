@@ -176,7 +176,7 @@
 > The dataset's "Explicit" class turned out to include crime and violence news, while my mental model was sexual content, which is what my test sentences checked. I'd now start by writing a labelling guideline, reading 50 random examples per class, and agreeing on the definition before modelling.
 
 **I4. 🟢 Tell me about collaborating on this.**
-> *(Truthful.)* The notebook outputs show it ran on a machine with user "Akhil", and the README was later rewritten with an AI assistant. Be ready to say what you wrote and ran, and how you verified the AI-written README (and that you corrected it).
+> It was a four-person team project for BITS F464 Machine Learning, reproducing a paper on detecting inappropriate content in text. Per our report's work split, I generated the paper's results, designed the model and framework, and ran the experiments. Teammates proposed extensions (BERT, LIME/SHAP, adversarial robustness), verified results, and wrote up the report. The notebook outputs also show it ran on a teammate's machine. *(Adjust to what you actually did.)*
 
 ---
 
@@ -197,8 +197,8 @@
 **X5. 🟡 "Why is your stopword list removing 'not'?"**
 > NLTK's English stopword list includes negations. For sentiment or moderation that's harmful: "not explicit" becomes "explicit". I'd use a custom list or skip stopword removal.
 
-**X6. 🟡 "Who is Akhil?"**
-> *(Answer truthfully.)* E.g. "A teammate or the machine I ran it on. The notebook output shows that user path." Be ready to explain your part.
+**X6. 🟡 "Who is Akhil? And your course report says F1 0.91. Which is right?"**
+> *(Answer truthfully about Akhil.)* On the metric: the course report repeated the same label mix-up. 0.91 is the non-explicit class's F1, and the explicit class's F1 is 0.73. The report is in the wrong repo (E-Commerce-Marketplace). I'd move it here with a corrected results table.
 
 **X7. 🔴 "Why should we believe you understand ML evaluation if your own project mislabelled its main metric?"**
 > Because I found it, understood exactly why it happened, and changed my process: explicit label ids, a confusion matrix next to every report, and sanity checks of supports against class frequencies. Mistakes like this are common in practice. What matters is having checks that catch them.
